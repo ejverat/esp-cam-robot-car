@@ -39,6 +39,7 @@ Camera::Camera(bool videoFlip) {
 
   if (err_init != ESP_OK) {
     // insert error handling here
+    Serial.printf("ERROR on camera initialization: 0x%x\n", err_init);
   }
 
   if (videoFlip) {

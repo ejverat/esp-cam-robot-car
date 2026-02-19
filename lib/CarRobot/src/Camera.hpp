@@ -2,6 +2,7 @@
 
 namespace Robot {
 class Camera {
+public:
   Camera(bool videoFlip);
   void init(void);
 };
