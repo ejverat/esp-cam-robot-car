@@ -8,6 +8,8 @@ public:
   void forward();
   void backward();
   void setSpeed(int speed_value);
+  void increaseSpeed(int value);
+  void decreaseSpeed(int value);
   ~Motor();
 
 private:

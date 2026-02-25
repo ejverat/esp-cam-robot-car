@@ -26,6 +26,26 @@ void Motor::setSpeed(int speed_value) {
   }
 }
 
+void Motor::increaseSpeed(int value) {
+  if (speed + value >= 255) {
+    speed = 255;
+  } else {
+    speed += value;
+  }
+
+  setSpeed(speed);
+}
+
+void Motor::decreaseSpeed(int value) {
+  if (speed > value) {
+    speed -= value;
+  } else {
+    speed = 0;
+  }
+
+  setSpeed(speed);
+}
+
 Motor::~Motor() {
   analogWrite(pin1, 0);
   analogWrite(pin2, 0);

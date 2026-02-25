@@ -13,6 +13,16 @@ public:
   void stop(void);
   void setSpeed(int speedValue);
 
+  inline void increaseSpeed(int value) {
+    motorLeft.increaseSpeed(value);
+    motorRight.increaseSpeed(value);
+  }
+
+  inline void decreaseSpeed(int value) {
+    motorLeft.decreaseSpeed(value);
+    motorRight.decreaseSpeed(value);
+  }
+
 private:
   Motor motorRight;
   Motor motorLeft;
