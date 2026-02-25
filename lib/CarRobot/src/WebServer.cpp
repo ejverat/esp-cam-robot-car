@@ -54,6 +54,14 @@ esp_err_t action_handler(httpd_req_t *req) {
 }
 
 esp_err_t stream_handler(httpd_req_t *req) {
+  auto mCameraPtr = static_cast<Camera *>(req->user_ctx);
+  esp_err_t res = ESP_OK;
+
+  res = httpd_resp_set_type(req, WebServer::_STREAM_CONTENT_TYPE);
+
+  if (res != ESP_OK)
+    return res;
+
   httpd_resp_set_type(req, "text/html");
   return httpd_resp_send(req, (const char *)WebServer::INDEX_HTML,
                          strlen(WebServer::INDEX_HTML));

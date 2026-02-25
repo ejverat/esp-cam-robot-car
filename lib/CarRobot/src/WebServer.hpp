@@ -12,6 +12,14 @@ private:
   DriveController mDriver;
 
 public:
+#define PART_BOUNDARY                                                          \
+  "123456789000000000000987654321" // A boundary used to split MIME streams
+  static constexpr char *_STREAM_CONTENT_TYPE =
+      "multipart/x-mixed-replace;boundary=" PART_BOUNDARY;
+  static constexpr char *_STREAM_BOUNDARY = "\r\n--" PART_BOUNDARY "\r\n";
+  static constexpr char *_STREAM_PART =
+      "Content-Type: image/jpeg\r\nContent-Length: %u\r\n\r\n";
+
   static constexpr char INDEX_HTML[] = R"rawliteral(
 <html>
   <head>
