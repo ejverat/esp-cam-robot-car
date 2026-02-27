@@ -16,15 +16,21 @@ public:
   inline void increaseSpeed(int value) {
     motorLeft.increaseSpeed(value);
     motorRight.increaseSpeed(value);
+    lastSpeed = motorLeft.getSpeed();
   }
 
   inline void decreaseSpeed(int value) {
     motorLeft.decreaseSpeed(value);
     motorRight.decreaseSpeed(value);
+    lastSpeed = motorLeft.getSpeed();
   }
 
 private:
   Motor motorRight;
   Motor motorLeft;
+  bool isStop = true;
+  int lastSpeed;
+
+  void restoreSpeed();
 };
 } // namespace Robot

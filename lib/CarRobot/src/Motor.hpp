@@ -10,6 +10,7 @@ public:
   void setSpeed(int speed_value);
   void increaseSpeed(int value);
   void decreaseSpeed(int value);
+  inline int getSpeed() const { return speed; }
   ~Motor();
 
 private:
