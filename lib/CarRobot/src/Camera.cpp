@@ -47,7 +47,7 @@ Camera::Camera(bool videoFlip) {
     s->set_framesize(s, FRAMESIZE_VGA);
 
     s->set_vflip(s, 1);
-    s->set_hmirror(s, 0);
+    s->set_hmirror(s, 1);
   }
 }
 } // namespace Robot

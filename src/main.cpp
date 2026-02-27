@@ -32,7 +32,7 @@ void setup() {
 
   Serial.println("Initializing web server");
   server = std::make_unique<Robot::WebServer>(
-      Robot::Camera(false),
+      Robot::Camera(true),
       Robot::DriveController(
           Robot::Motor(Robot::GPIO::RIGHT_MOTOR_CONTROL_PIN1,
                        Robot::GPIO::RIGHT_MOTOR_CONTROL_PIN2),
