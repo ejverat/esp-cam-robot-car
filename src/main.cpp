@@ -36,8 +36,8 @@ void setup() {
       Robot::DriveController(
           Robot::Motor(Robot::GPIO::RIGHT_MOTOR_CONTROL_PIN1,
                        Robot::GPIO::RIGHT_MOTOR_CONTROL_PIN2),
-          Robot::Motor(Robot::GPIO::LEFT_MOTOR_CONTROL_PIN1,
-                       Robot::GPIO::LEFT_MOTOR_CONTROL_PIN2)));
+          Robot::Motor(Robot::GPIO::LEFT_MOTOR_CONTROL_PIN2,
+                       Robot::GPIO::LEFT_MOTOR_CONTROL_PIN1)));
 }
 
 void loop() {}

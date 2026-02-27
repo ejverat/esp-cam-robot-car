@@ -15,7 +15,7 @@ public:
 private:
   int pin1;
   int pin2;
-  static constexpr int INITIAL_SPEED = 100;
+  static constexpr int INITIAL_SPEED = 170;
   int speed = INITIAL_SPEED;
   bool isForward = true;
 };

@@ -20,10 +20,10 @@ constexpr int HREF_GPIO_NUM = 23;
 constexpr int PCLK_GPIO_NUM = 22;
 constexpr int FLASHLIGHT_PIN = 4;
 
-constexpr int RIGHT_MOTOR_CONTROL_PIN1 = 14;
-constexpr int RIGHT_MOTOR_CONTROL_PIN2 = 15;
-constexpr int LEFT_MOTOR_CONTROL_PIN1 = 13;
-constexpr int LEFT_MOTOR_CONTROL_PIN2 = 12;
+constexpr int RIGHT_MOTOR_CONTROL_PIN1 = 15;
+constexpr int RIGHT_MOTOR_CONTROL_PIN2 = 14;
+constexpr int LEFT_MOTOR_CONTROL_PIN1 = 12;
+constexpr int LEFT_MOTOR_CONTROL_PIN2 = 13;
 
 void initializePins(void);
 } // namespace Robot::GPIO
